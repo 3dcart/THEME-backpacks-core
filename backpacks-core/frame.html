@@ -23,7 +23,7 @@
 	<!--END: page_styles-->
 
 </head>
-<body class="[body_class]" data-currency="[currency_symbol]">
+<body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
 
     <section class="wrapper">
 
@@ -47,12 +47,12 @@
                         <div class="useraccount clearfix">
                             <ul class="clearfix">
                                 <!--START: username-->
-                                <li><a href="/logout.asp"><span class="icon-logout"></span>Sign Out</a> or <a href="/myaccount.asp">View My Account</a></li>
+                                <li><a href="/logout.asp"><span class="icon-logout"></span>[frame_logout-link-text]</a> or <a href="/myaccount.asp">[frame_myaccount-link-text]</a></li>
                                 <!--END: username-->
                                 <!--START: login-->
-                                <li><a href="/myaccount.asp"><span class="icon-login"></span>Sign In</a> or <a href="/register.asp">Create an Account</a></li>
+                                <li><a href="/myaccount.asp"><span class="icon-login"></span>[frame_login-link-text]</a> or <a href="/register.asp">[frame_register-link-text]</a></li>
                                 <!--END: login-->
-                                <li><a href="/view_cart.asp">Cart <span class="icon-basket"></span></a></li>
+                                <li><a href="/view_cart.asp">[frame_shopping-cart-text] <span class="icon-basket"></span></a></li>
                             </ul>
                         </div>
                     </div>
@@ -112,7 +112,7 @@
                         <a href="view_cart.asp" class="minicart-inner clearfix">
                             <span class="icon-basket cart-icon"></span>
                             <span class="cart-details">
-                                <span class="minicart-items">[ITEMSINCART]</span> Items
+                                <span class="minicart-items">[ITEMSINCART]</span> [frame_ITEMSINCART-text]
                             </span>
                         </a>
                     </div>
