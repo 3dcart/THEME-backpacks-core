@@ -191,6 +191,9 @@ h1 {
   .navbar-header {
       float: right;
   }
+  .global-footer{
+	text-align:center;
+}
   .navbar-left,.navbar-right {
       float: none !important;
   }
@@ -1142,4 +1145,9 @@ iframe {
 	.cart-box.fixed-cart-box .cart-box-sticky {
 		max-width: 293px;
 	}
+}
+@media(min-width: 768px) {
+    .revealOnScroll {
+        opacity:0;
+    }
 }
