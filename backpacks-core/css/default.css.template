@@ -1044,7 +1044,7 @@ del.original-price {
     top: 50%;
     right: 0;
     z-index: 999;
-    background-color: #[btn_color];
+    background-color: #5b5b5d;
     color: #fff;
     border-radius: 20px 0 0 20px;
     padding: 15px;

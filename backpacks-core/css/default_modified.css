@@ -2,7 +2,7 @@
 ** Bootstrap over-rides
 */
 
-body,.main-body {
+.main-body {
 	display: flex;
 	height: 100%;
 	flex-direction: column;
