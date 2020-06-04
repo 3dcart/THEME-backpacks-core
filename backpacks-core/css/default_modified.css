@@ -14,7 +14,20 @@
 footer {
 	flex-shrink: 0;
 }
-
+.product-items.productList .product-item .img {
+    border: 1px solid #ececec;
+}
+.product-items.productList .product-item .img a {
+    position: initial;
+}
+@media (max-width: 991px){
+.product-items.productList .product-item .img {
+    width: 32%;
+}
+.product-items.productList .product-item .product-content {
+    width: 65%;
+}
+}
 body {
 	font-family: 'Montserrat', sans-serif;
     background: #e5e6e7;
