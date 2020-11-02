@@ -2,26 +2,40 @@
 ** Bootstrap over-rides
 */
 
-html, body {
-  height: 100%;
-}
-
-body, .wrapper {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
+.main-body {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	min-height: 100vh;
 }
 .page-content {
-  flex: 1 0 auto;
+	flex: 1 0 auto;
 }
 footer {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 .product-items.productList .product-item .img {
     border: 1px solid #ececec;
 }
 .product-items.productList .product-item .img a {
     position: initial;
+}
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+color:#000;
+}
+ 
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
 }
 @media (max-width: 991px){
 .product-items.productList .product-item .img {
@@ -510,6 +524,8 @@ ul.extrapages li a {
     font-size: 14px;
     font-weight: 400;
     line-height:1.5em;
+}.copyright a{
+	color:#000;
 }
 @media(min-width: 1200px) {
     .copyright {
@@ -555,6 +571,7 @@ ul.extrapages li a {
     border-color: #[btn2_border];
     background-color: #[btn2_color];
     font-size: 0px;
+	color:#000;
 }
 .mailinglist-submit i{
     font-size: 14px;
@@ -746,7 +763,7 @@ del.original-price {
     background-color: #fff;
     padding: 45px 0;
 }
-.products-section h2 {
+.products-section h2,.products-section h1 {
     text-align: center;
     color: #000;
     font-size: 36px;
@@ -758,14 +775,14 @@ del.original-price {
     position: relative;
     border: none;
 }
-    .products-section h2 span{
+    .products-section h2 span,.products-section h1 span{
         background: #fff;
         display: inline-block;
         padding: 0 20px;
         position:relative;
         z-index:1;
     }
-.products-section h2:after {
+.products-section h2:after,.products-section h1:after {
     content: '';
     position: absolute;
     height:1px;
@@ -869,10 +886,10 @@ del.original-price {
         position: absolute;
 		right: 0;
     }
-    .products-section h2, .home-page-content .category-header h3 {
+    .products-section h2,.products-section h1, .home-page-content .category-header h3 {
         font-size: 30px;
     }
-    .products-section h2 span, .home-page-content .category-header h3 span{
+    .products-section h2 span,.products-section h1 span, .home-page-content .category-header h3 span{
         display: block;
         padding:0;
     }
