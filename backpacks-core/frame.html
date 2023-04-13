@@ -187,7 +187,7 @@
         <div class="container" id="site-footer">
             <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront" data-callback="mailinglist_response">
                 <form method="post" name="mailing" action="mailing_list_ajax.asp">
-                    <h3>[frame_mailinglist]</h3>
+                    <h2>[frame_mailinglist]</h2>
                     <div class="row">
                         <div class="col-sm-9">
                             <div class="mailinglist-form clearfix">
@@ -225,11 +225,11 @@
                         </div>
 
                         <!--START: FRAME_LINKS-->
-                        <ul id="extrapages" class="list-unstyled row extrapages" role="menu">
+                        <ul id="extrapages" class="list-unstyled row extrapages" aria-hidden="menu">
                             <li class="label hidden">Links</li>
                             <!--START: LINKS-->
                             <!--START: LINK_FORMAT-->
-                            <li class="col-sm-6"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" role="menuitem">[link_name]</a></li>
+                            <li class="col-sm-6" role="menuitem"><a href="infopage.asp?page=[link_id]&extra=1" target="[link_target]" class="menu-bottom" aria-hidden="menuitem">[link_name]</a></li>
                             <!--END: LINK_FORMAT-->
                             <!--END: LINKS-->
                         </ul>
