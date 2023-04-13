@@ -1,6 +1,17 @@
 /*
 ** Bootstrap over-rides
 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Playfair+Display:ital@1&display=swap');
+.antiCls { 
+    visibility: hidden; 
+}
+
+body {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
 .main-body {
 	display: flex;
