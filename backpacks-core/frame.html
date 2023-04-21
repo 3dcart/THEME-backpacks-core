@@ -130,7 +130,7 @@
                     </div>
 
                     <div class="col-xs-2 visible-xs text-left head-mobile-nav">
-                        <a href="#" class="pull-right" data-toggle="modal" data-target="#searchModal" role="search modal">
+                        <a href="#" class="pull-right" data-toggle="modal" data-target="#searchModal" aria-label="search modal">
                             <span class="sr-only">Search</span>
                             <span class="icon-search" role="presentation"></span>
                         </a>
@@ -184,7 +184,7 @@
 
         <!-- FOOTER -->
         <!--START: FRAME_MAILLIST-->
-        <div class="container" id="site-footer">
+        <div class="container antiCls" id="site-footer">
             <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront" data-callback="mailinglist_response">
                 <form method="post" name="mailing" action="mailing_list_ajax.asp">
                     <h2>[frame_mailinglist]</h2>
@@ -193,7 +193,7 @@
                             <div class="mailinglist-form clearfix">
                                 <input class="mailinglist-input form-control" type="text" name="email" placeholder="[mailinglist_email-field]" autocomplete="off"  aria-required="true" aria-label="email address" aria-invalid="true"/>
                                 <button class="mailinglist-submit btn btn-default btn-inverse" type="submit" name="www" aria-label="mailinglist button">
-                                    <span id="mailing-btn-txt ">[mailinglist_button]</span>
+                                    <span id="mailing-btn-txt "><i class="icon-right"></i>[mailinglist_button]</span>
                                     <span id="mailing-btn-load" class="mailing-btn-load icon-spin2 animate-spin hidden"></span>
                                 </button>
                             </div>
@@ -215,7 +215,7 @@
         </div>
         <div class="clearfix"></div>
         <!--END: FRAME_MAILLIST-->
-        <footer class="site-footer">
+        <footer class="site-footer antiCls ">
             <div class="container">
 
                 <div class="row">
@@ -287,7 +287,7 @@
 
     </section>
 
-    <a href="#" class="scrollToTop"><i class="icon-angle-up icon-2x"></i> <span>TOP</span></a>
+    <a href="#" class="scrollToTop" aria-label="Scroll to Top"><i class="icon-angle-up icon-2x" role="presentation"></i> <span class="sr-only">TOP</span></a>
 
     <nav id="mobile-menu" class="mobile-menu">
         <div class="mobile-menu-inner">
@@ -360,23 +360,10 @@
 			type="text/css"
 		/>
 	</noscript>
-	<link
-		rel="preload stylesheet"
-		href="/assets/templates/common-core/lib/animate-me/animate.css"
-		as="style"
-		onload="this.onload=null;this.rel='stylesheet'"
-	/>
-	<noscript>
-		<link
-			href="/assets/templates/common-core/lib/animate-me/animate.css"
-			rel="stylesheet"
-			type="text/css"
-		/>
-	</noscript>
 
 	<!--START: page_scripts-->
 	<script src="assets/templates/common-core/lib/jquery.min.js"></script>
-	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js"></script>
+	<script src="assets/templates/common-core/lib/jquery-migrate-3.0.1.min.js" defer></script>
     <script src="assets/templates/common-core/lib/bootstrap/js/bootstrap.js" defer="defer"></script>
     <script src="assets/templates/common-core/js/core.js" defer="defer"></script>
     <script src="assets/templates/[template]/js/main.js" defer="defer"></script>
