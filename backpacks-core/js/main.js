@@ -121,8 +121,8 @@ jQuery(document).ready(function () {
         }, 250);
     });
 
-
     var respWidth = window.innerWidth;
+	
     if (respWidth >= 767) {
     	jQuery('.navbar .dropdown').hover(function () {
     		jQuery(this).find('.dropdown-menu').first().stop(true, true).delay(250).slideDown('fast');
@@ -137,6 +137,24 @@ jQuery(document).ready(function () {
     	});
     }
 
+	//Check to see if the window is top if not then display button
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			$('.scrollToTop').fadeIn();
+		} else {
+			$('.scrollToTop').fadeOut();
+		}
+	});
+
+	//Click event to scroll to top
+	$('.scrollToTop').click(function () {
+		$('html, body').animate({ scrollTop: 0 }, 800);
+		return false;
+	});
+	
+	setTimeout(function(){
+		$('.antiCls, .antiCls-xs').css("visibility", "visible");
+	}, 800);
 });
 
 jQuery(function () { 
@@ -171,68 +189,6 @@ jQuery(function ($) {
 
 	$('.navbar .dropdown > a').click(function () {
 		location.href = this.href;
-	});
-
-});
-
-
-jQuery(function () {
-
-	var $window = jQuery(window),
-		win_height_padded = $window.height() * 1.1;
-
-	$window.on('scroll', revealOnScroll);
-
-	function revealOnScroll() {
-		var scrolled = $window.scrollTop(),
-			win_height_padded = $window.height() * 1.1;
-
-		// Showed...
-		$(".revealOnScroll:not(.animated)").each(function () {
-			var $this = $(this),
-				offsetTop = $this.offset().top;
-
-			if (scrolled + win_height_padded > offsetTop) {
-				if ($this.data('timeout')) {
-					window.setTimeout(function () {
-						$this.addClass('animated ' + $this.data('animation'));
-						$this.removeClass('revealOnScroll');
-					}, parseInt($this.data('timeout'), 10));
-				} else {
-					$this.addClass('animated ' + $this.data('animation'));
-					$this.removeClass('revealOnScroll');
-				}
-			}
-		});
-		// Hidden...
-		$(".revealOnScroll.animated").each(function (index) {
-			var $this = $(this),
-				offsetTop = $this.offset().top;
-			if (scrolled + win_height_padded < offsetTop) {
-				$(this).removeClass('revealOnScroll animated');
-			}
-		});
-	}
-
-	revealOnScroll();
-});
-
-
-$(document).ready(function () {
-
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function () {
-		if ($(this).scrollTop() > 100) {
-			$('.scrollToTop').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-		}
-	});
-
-	//Click event to scroll to top
-	$('.scrollToTop').click(function () {
-		$('html, body').animate({ scrollTop: 0 }, 800);
-		return false;
 	});
 
 });
