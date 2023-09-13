@@ -33,6 +33,7 @@ body {
 footer {
 	flex-shrink: 0;
 }
+#mobSearch{display:none !important}
 .product-items.productList .product-item .img {
     border: 1px solid #ececec;
 }
